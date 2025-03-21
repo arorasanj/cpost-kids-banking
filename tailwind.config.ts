@@ -30,6 +30,7 @@ export default {
 					dark: "#1A1A1A",
 					light: "#F8F8F8",
 					gray: "#A0A0A0",
+					blue: "#003087", // Added new blue color
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

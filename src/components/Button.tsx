@@ -16,13 +16,13 @@ const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cpost-red';
+  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cpost-blue';
   
   const variants = {
-    primary: 'bg-cpost-red text-white hover:bg-opacity-90 shadow-sm',
+    primary: 'bg-cpost-blue text-white hover:bg-opacity-90 shadow-sm',
     secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-    outline: 'border border-cpost-red text-cpost-red bg-transparent hover:bg-cpost-red/5',
-    ghost: 'text-cpost-red hover:bg-cpost-red/5',
+    outline: 'border border-cpost-blue text-cpost-blue bg-transparent hover:bg-cpost-blue/5',
+    ghost: 'text-cpost-blue hover:bg-cpost-blue/5',
   };
   
   const sizes = {

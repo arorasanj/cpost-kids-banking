@@ -10,13 +10,13 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto animate-fade-in">
-          <div className="inline-flex items-center rounded-full bg-cpost-red/10 px-3 py-1 text-sm font-medium text-cpost-red mb-2">
-            <span className="flex h-2 w-2 rounded-full bg-cpost-red mr-1.5"></span>
+          <div className="inline-flex items-center rounded-full bg-cpost-blue/10 px-3 py-1 text-sm font-medium text-cpost-blue mb-2">
+            <span className="flex h-2 w-2 rounded-full bg-cpost-blue mr-1.5"></span>
             <span>New Banking Experience for Youth</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight text-center">
-            Banking Made <span className="text-cpost-red">Simple.</span> <br />
+            Banking Made <span className="text-cpost-blue">Simple.</span> <br />
             For The Next Generation.
           </h1>
           
