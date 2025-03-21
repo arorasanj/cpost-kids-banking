@@ -1,6 +1,9 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import { ChevronRight } from 'lucide-react';
+
 const HeroSection = () => {
   return <section className="pt-32 pb-20 overflow-hidden relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-50 via-white to-sky-50"></div>
@@ -22,10 +25,12 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
-            <Button size="lg" className="group">
-              Get Started
-              <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/signin">
+              <Button size="lg" className="group">
+                Get Started
+                <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg">
               Learn More
             </Button>
@@ -39,4 +44,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
