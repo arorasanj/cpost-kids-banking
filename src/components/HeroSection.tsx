@@ -1,11 +1,8 @@
-
 import React from 'react';
 import Button from './Button';
 import { ChevronRight } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section className="pt-32 pb-20 overflow-hidden relative">
+  return <section className="pt-32 pb-20 overflow-hidden relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-50 via-white to-sky-50"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +13,7 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight text-center">
-            Banking Made <span className="text-cpost-blue">Simple.</span> <br />
+            Banking Made <span className="text-[#e50914]">Simple.</span> <br />
             For The Next Generation.
           </h1>
           
@@ -40,8 +37,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
