@@ -55,7 +55,7 @@ const CardPersonality = () => {
                 </div>
                 <div className="bg-blue-50 p-6 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                    src="/placeholder.svg" 
                     alt="Arts Card Design" 
                     className="max-h-[350px] rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
                   />
@@ -89,7 +89,7 @@ const CardPersonality = () => {
                 </div>
                 <div className="bg-purple-50 p-6 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                    src="/placeholder.svg" 
                     alt="Culture Card Design" 
                     className="max-h-[350px] rounded-xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300"
                   />
@@ -123,7 +123,7 @@ const CardPersonality = () => {
                 </div>
                 <div className="bg-green-50 p-6 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                    src="/placeholder.svg" 
                     alt="Social Causes Card Design" 
                     className="max-h-[350px] rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
                   />

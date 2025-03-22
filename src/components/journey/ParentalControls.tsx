@@ -35,7 +35,7 @@ const ParentalControls = () => {
           <div className="phone-mockup bg-white max-w-xs mx-auto">
             <div className="phone-notch"></div>
             <img 
-              src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+              src="/placeholder.svg" 
               alt="Parent App Interface" 
               className="w-full" 
             />
