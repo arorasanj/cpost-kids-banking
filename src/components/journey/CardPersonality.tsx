@@ -57,8 +57,8 @@ const CardPersonality = () => {
                 <div className="bg-blue-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" 
-                      alt="Arts Card Design" 
+                      src="https://images.unsplash.com/photo-1541961017774-22349e4a1262" 
+                      alt="Abstract Painting Card Design" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 to-purple-500/40 mix-blend-overlay"></div>
@@ -98,8 +98,8 @@ const CardPersonality = () => {
                 <div className="bg-purple-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-                      alt="Culture Card Design" 
+                      src="https://images.unsplash.com/photo-1515404929826-76fff9fef6fe" 
+                      alt="Sistine Chapel Art Card Design" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 mix-blend-overlay"></div>
@@ -139,8 +139,8 @@ const CardPersonality = () => {
                 <div className="bg-green-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
-                      alt="Social Causes Card Design" 
+                      src="https://images.unsplash.com/photo-1493612276216-ee3925520721" 
+                      alt="Social Change and Activism Card Design" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-teal-500/40 mix-blend-overlay"></div>
