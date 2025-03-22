@@ -98,8 +98,8 @@ const CardPersonality = () => {
                 <div className="bg-purple-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="https://images.unsplash.com/photo-1515404929826-76fff9fef6fe" 
-                      alt="Sistine Chapel Art Card Design" 
+                      src="https://images.unsplash.com/photo-1576016770956-debb63d92058" 
+                      alt="Cultural Celebration Card Design" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 mix-blend-overlay"></div>
@@ -139,8 +139,8 @@ const CardPersonality = () => {
                 <div className="bg-green-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="https://images.unsplash.com/photo-1493612276216-ee3925520721" 
-                      alt="Social Change and Activism Card Design" 
+                      src="https://images.unsplash.com/photo-1628816411877-da2b1d846cf6" 
+                      alt="Social Activism Card Design" 
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-teal-500/40 mix-blend-overlay"></div>
