@@ -57,7 +57,7 @@ const UniversityReadiness = () => {
                 <h4 className="font-semibold text-lg mb-2">Badge Achievement</h4>
                 <div className="flex items-center">
                   <div className={`w-16 h-16 rounded-full ${readinessPoints[activeIndex].badgeColor} flex items-center justify-center mr-4`}>
-                    <readinessPoints[activeIndex].icon className={`h-8 w-8 ${readinessPoints[activeIndex].iconColor}`} />
+                    <CheckCircle2 className={`h-8 w-8 ${readinessPoints[activeIndex].iconColor}`} />
                   </div>
                   <div>
                     <p className="font-medium">{readinessPoints[activeIndex].badgeName}</p>
@@ -77,7 +77,6 @@ const readinessPoints = [
   {
     title: "Education Funding Knowledge",
     ageGroup: "University Preparation",
-    icon: CheckCircle2,
     description: "Understanding student loans, scholarships, grants, and responsible borrowing for education.",
     learnings: [
       "Comparing different student loan options",
@@ -93,7 +92,6 @@ const readinessPoints = [
   {
     title: "Independent Money Management",
     ageGroup: "Life Skills",
-    icon: CheckCircle2,
     description: "Ability to create and follow a budget, track expenses, and prioritize spending wisely.",
     learnings: [
       "Creating a personal budget for university life",
@@ -109,7 +107,6 @@ const readinessPoints = [
   {
     title: "Financial Literacy Foundation",
     ageGroup: "Core Knowledge",
-    icon: CheckCircle2,
     description: "Solid understanding of banking, saving, interest, and basic investment principles.",
     learnings: [
       "Understanding different types of bank accounts",
@@ -125,7 +122,6 @@ const readinessPoints = [
   {
     title: "Peer Financial Pressure Resistance",
     ageGroup: "Social Skills",
-    icon: CheckCircle2,
     description: "Confidence to make sound financial decisions despite social pressures from peers.",
     learnings: [
       "Recognizing financial peer pressure situations",
