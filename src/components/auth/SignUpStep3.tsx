@@ -6,22 +6,20 @@ import * as z from 'zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import Button from '@/components/Button';
-import { residencySchema } from './SignUpSchemas';
+import { residencySchema, ResidencyValues } from './SignUpSchemas';
 
 interface SignUpStep3Props {
   initialData: {
-    residencyStatus: string;
+    residencyStatus: 'citizen' | 'permanent-resident';
   };
-  onNext: (data: z.infer<typeof residencySchema>) => void;
+  onNext: (data: ResidencyValues) => void;
   onBack: () => void;
 }
 
 const SignUpStep3 = ({ initialData, onNext, onBack }: SignUpStep3Props) => {
-  const form = useForm<z.infer<typeof residencySchema>>({
+  const form = useForm<ResidencyValues>({
     resolver: zodResolver(residencySchema),
-    defaultValues: {
-      residencyStatus: initialData.residencyStatus as any,
-    },
+    defaultValues: initialData,
   });
 
   return (

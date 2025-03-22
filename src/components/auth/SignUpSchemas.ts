@@ -36,3 +36,9 @@ export const sinSchema = z.object({
 });
 
 export type FormStep = 1 | 2 | 3 | 4;
+
+// Export the inferred types from the schemas for use in components
+export type BaseFormValues = z.infer<typeof baseFormSchema>;
+export type PersonalInfoValues = z.infer<typeof personalInfoSchema>;
+export type ResidencyValues = z.infer<typeof residencySchema>;
+export type SinValues = z.infer<typeof sinSchema>;

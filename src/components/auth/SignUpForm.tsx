@@ -1,6 +1,12 @@
 
 import React, { useState } from 'react';
-import { FormStep } from './SignUpSchemas';
+import { 
+  FormStep, 
+  BaseFormValues, 
+  PersonalInfoValues, 
+  ResidencyValues, 
+  SinValues 
+} from './SignUpSchemas';
 import StepIndicator from './StepIndicator';
 import SignUpStep1 from './SignUpStep1';
 import SignUpStep2 from './SignUpStep2';
@@ -17,29 +23,29 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
     email: '',
     password: '',
     dob: new Date(),
-    gender: 'prefer-not-to-say',
+    gender: 'prefer-not-to-say' as const,
     address: '',
-    residencyStatus: 'citizen',
+    residencyStatus: 'citizen' as const,
     sin: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleStep1Submit = (data: { email: string; password: string }) => {
+  const handleStep1Submit = (data: BaseFormValues) => {
     setFormData({ ...formData, ...data });
     setStep(2);
   };
 
-  const handleStep2Submit = (data: { dob: Date; gender: string; address: string }) => {
+  const handleStep2Submit = (data: PersonalInfoValues) => {
     setFormData({ ...formData, ...data });
     setStep(3);
   };
 
-  const handleStep3Submit = (data: { residencyStatus: string }) => {
+  const handleStep3Submit = (data: ResidencyValues) => {
     setFormData({ ...formData, ...data });
     setStep(4);
   };
 
-  const handleStep4Submit = async (data: { sin: string }) => {
+  const handleStep4Submit = async (data: SinValues) => {
     const completeFormData = {
       ...formData,
       ...data

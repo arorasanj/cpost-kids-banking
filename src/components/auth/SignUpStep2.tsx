@@ -13,26 +13,22 @@ import { CalendarIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button as ShadcnButton } from '@/components/ui/button';
 import Button from '@/components/Button';
-import { personalInfoSchema } from './SignUpSchemas';
+import { personalInfoSchema, PersonalInfoValues } from './SignUpSchemas';
 
 interface SignUpStep2Props {
   initialData: {
     dob: Date;
-    gender: string;
+    gender: 'male' | 'female' | 'non-binary' | 'prefer-not-to-say';
     address: string;
   };
-  onNext: (data: z.infer<typeof personalInfoSchema>) => void;
+  onNext: (data: PersonalInfoValues) => void;
   onBack: () => void;
 }
 
 const SignUpStep2 = ({ initialData, onNext, onBack }: SignUpStep2Props) => {
-  const form = useForm<z.infer<typeof personalInfoSchema>>({
+  const form = useForm<PersonalInfoValues>({
     resolver: zodResolver(personalInfoSchema),
-    defaultValues: {
-      dob: initialData.dob,
-      gender: initialData.gender as any,
-      address: initialData.address,
-    },
+    defaultValues: initialData,
   });
 
   return (
