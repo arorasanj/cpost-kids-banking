@@ -17,15 +17,26 @@ interface SignUpFormProps {
   onSignedIn: () => void;
 }
 
+// Define a more explicit type for the form data to match all possible values
+interface FormData {
+  email: string;
+  password: string;
+  dob: Date;
+  gender: 'male' | 'female' | 'non-binary' | 'prefer-not-to-say';
+  address: string;
+  residencyStatus: 'citizen' | 'permanent-resident';
+  sin: string;
+}
+
 const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
   const [step, setStep] = useState<FormStep>(1);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     email: '',
     password: '',
     dob: new Date(),
-    gender: 'prefer-not-to-say' as const,
+    gender: 'prefer-not-to-say',
     address: '',
-    residencyStatus: 'citizen' as const,
+    residencyStatus: 'citizen',
     sin: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
