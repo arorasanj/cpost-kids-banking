@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,28 +28,33 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="flex items-center h-10">
+            <Link to="/" className="flex items-center h-10">
               <div className="bg-cpost-red p-1.5 rounded-md">
                 <svg width="28" height="20" viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M312 0L225 87L175 37L125 87L38 0H0V38L87 125L0 212V250H38L125 163L175 213L225 163L312 250H350V212L263 125L350 38V0H312Z" fill="white"/>
                 </svg>
               </div>
               <span className="ml-2 text-xl font-bold">CPost</span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
+            <Link to="/" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
+              Home
+            </Link>
+            <Link to="/journey" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
+              Your Journey
+            </Link>
             <a href="#features" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
               Features
             </a>
             <a href="#rewards" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
               Rewards
             </a>
-            <a href="#app" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
-              App
-            </a>
-            <Button size="sm">Download App</Button>
+            <Link to="/signin">
+              <Button size="sm">Sign In</Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -69,14 +75,14 @@ const Navbar = () => {
       >
         <div className="flex flex-col p-8 h-full">
           <div className="flex justify-between items-center mb-8">
-            <div className="flex items-center h-10">
+            <Link to="/" className="flex items-center h-10" onClick={() => setIsMobileMenuOpen(false)}>
               <div className="bg-cpost-red p-1.5 rounded-md">
                 <svg width="28" height="20" viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M312 0L225 87L175 37L125 87L38 0H0V38L87 125L0 212V250H38L125 163L175 213L225 163L312 250H350V212L263 125L350 38V0H312Z" fill="white"/>
                 </svg>
               </div>
               <span className="ml-2 text-xl font-bold">CPost</span>
-            </div>
+            </Link>
             <button
               className="p-2 rounded-md text-gray-800"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -85,6 +91,20 @@ const Navbar = () => {
             </button>
           </div>
           <nav className="flex flex-col space-y-8">
+            <Link
+              to="/"
+              className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/journey"
+              className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Your Journey
+            </Link>
             <a 
               href="#features" 
               className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
@@ -99,13 +119,13 @@ const Navbar = () => {
             >
               Rewards
             </a>
-            <a 
-              href="#app" 
+            <Link 
+              to="/signin" 
               className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              App
-            </a>
+              Sign In
+            </Link>
             <Button className="mt-4" onClick={() => setIsMobileMenuOpen(false)}>
               Download App
             </Button>
