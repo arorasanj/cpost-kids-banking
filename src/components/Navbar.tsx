@@ -46,12 +46,6 @@ const Navbar = () => {
             <Link to="/journey" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
               Your Journey
             </Link>
-            <a href="#features" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
-              Features
-            </a>
-            <a href="#rewards" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
-              Rewards
-            </a>
             <Link to="/signin">
               <Button size="sm">Sign In</Button>
             </Link>
@@ -105,20 +99,6 @@ const Navbar = () => {
             >
               Your Journey
             </Link>
-            <a 
-              href="#features" 
-              className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Features
-            </a>
-            <a 
-              href="#rewards" 
-              className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Rewards
-            </a>
             <Link 
               to="/signin" 
               className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
