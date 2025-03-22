@@ -2,6 +2,7 @@
 import React from 'react';
 import { Palette, Heart, Globe } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from "@/components/ui/card";
 
 const CardPersonality = () => {
   return (
@@ -54,11 +55,18 @@ const CardPersonality = () => {
                   </ul>
                 </div>
                 <div className="bg-blue-50 p-6 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Arts Card Design" 
-                    className="max-h-[350px] rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                  />
+                  <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <img 
+                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      alt="Arts Card Design" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 to-purple-500/40 mix-blend-overlay"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <p className="text-white text-xs font-medium">C-POST</p>
+                      <p className="text-white text-xs opacity-80">4000 1234 5678 9010</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,11 +96,18 @@ const CardPersonality = () => {
                   </ul>
                 </div>
                 <div className="bg-purple-50 p-6 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Culture Card Design" 
-                    className="max-h-[350px] rounded-xl shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300"
-                  />
+                  <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <img 
+                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      alt="Culture Card Design" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-pink-500/40 mix-blend-overlay"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <p className="text-white text-xs font-medium">C-POST</p>
+                      <p className="text-white text-xs opacity-80">4000 1234 5678 9010</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,11 +137,18 @@ const CardPersonality = () => {
                   </ul>
                 </div>
                 <div className="bg-green-50 p-6 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Social Causes Card Design" 
-                    className="max-h-[350px] rounded-xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                  />
+                  <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <img 
+                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      alt="Social Causes Card Design" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-teal-500/40 mix-blend-overlay"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <p className="text-white text-xs font-medium">C-POST</p>
+                      <p className="text-white text-xs opacity-80">4000 1234 5678 9010</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

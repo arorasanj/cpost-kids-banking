@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import JourneyHero from '@/components/journey/JourneyHero';
 import AgeStages from '@/components/journey/AgeStages';
 import CardPersonality from '@/components/journey/CardPersonality';
-import GrowthMilestones from '@/components/journey/GrowthMilestones';
 import UniversityReadiness from '@/components/journey/UniversityReadiness';
 import Footer from '@/components/Footer';
 
@@ -34,7 +33,6 @@ const Journey = () => {
       <JourneyHero />
       <AgeStages />
       <CardPersonality />
-      <GrowthMilestones />
       <UniversityReadiness />
       <Footer />
     </div>
