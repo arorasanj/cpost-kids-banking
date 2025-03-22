@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PiggyBank, Goal, TrendingUp, Trophy } from 'lucide-react';
+import { PiggyBank, Goal, TrendingUp, Trophy, Award, Sparkles } from 'lucide-react';
 import FeatureCard from './FeatureCard';
 import { Card } from './ui/card';
 
@@ -67,12 +67,20 @@ const SaveSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <FeatureCard
-            icon={PiggyBank}
-            title="Prize Linked Savings"
-            description="Every dollar saved gives you an entry into monthly prize draws. The more you save, the better your chances to win."
-            delay={100}
-          />
+          <div className="relative">
+            <FeatureCard
+              icon={Trophy}
+              title="Prize Linked Savings"
+              description="Every dollar saved gives you an entry into monthly prize draws. The more you save, the better your chances to win."
+              delay={100}
+            />
+            <div className="absolute -top-2 -right-2 animate-bounce">
+              <div className="relative">
+                <Award className="h-8 w-8 text-yellow-500" />
+                <Sparkles className="absolute -top-2 -right-2 h-4 w-4 text-yellow-400 animate-pulse" />
+              </div>
+            </div>
+          </div>
           <FeatureCard
             icon={Goal}
             title="Goal-Based Savings"

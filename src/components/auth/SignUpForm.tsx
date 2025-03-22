@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -12,19 +11,18 @@ import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button as ShadcnButton } from '@/components/ui/button';
 import Button from '@/components/Button';
 
 interface SignUpFormProps {
   onSignedIn: () => void;
 }
 
-// Base form schema
 const baseFormSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
 });
 
-// Step 2 form schema
 const personalInfoSchema = z.object({
   dob: z.date({
     required_error: "Please select a date of birth",
@@ -41,14 +39,12 @@ const personalInfoSchema = z.object({
   address: z.string().min(5, "Please enter your current address"),
 });
 
-// Step 3 form schema
 const residencySchema = z.object({
   residencyStatus: z.enum(['citizen', 'permanent-resident'], {
     required_error: "Please select your residency status",
   }),
 });
 
-// Step 4 form schema
 const sinSchema = z.object({
   sin: z.string()
     .min(9, "SIN must be 9 digits")
@@ -71,7 +67,6 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Step 1 form
   const step1Form = useForm<z.infer<typeof baseFormSchema>>({
     resolver: zodResolver(baseFormSchema),
     defaultValues: {
@@ -80,7 +75,6 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
     },
   });
   
-  // Step 2 form
   const step2Form = useForm<z.infer<typeof personalInfoSchema>>({
     resolver: zodResolver(personalInfoSchema),
     defaultValues: {
@@ -90,7 +84,6 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
     },
   });
   
-  // Step 3 form
   const step3Form = useForm<z.infer<typeof residencySchema>>({
     resolver: zodResolver(residencySchema),
     defaultValues: {
@@ -98,7 +91,6 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
     },
   });
   
-  // Step 4 form
   const step4Form = useForm<z.infer<typeof sinSchema>>({
     resolver: zodResolver(sinSchema),
     defaultValues: {
@@ -122,7 +114,6 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
   };
 
   const handleStep4Submit = async (data: z.infer<typeof sinSchema>) => {
-    // Combine all form data
     const completeFormData = {
       ...formData,
       ...data
@@ -130,10 +121,8 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
     
     setIsSubmitting(true);
     
-    // Simulate API call
     console.log('Sign Up Complete:', completeFormData);
     
-    // Simulate delay for API call
     setTimeout(() => {
       setIsSubmitting(false);
       onSignedIn();
@@ -223,7 +212,7 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
-                          <Button
+                          <ShadcnButton
                             variant="outline"
                             className={cn(
                               "w-full pl-3 text-left font-normal",
@@ -236,7 +225,7 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
                               <span>Pick a date</span>
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
+                          </ShadcnButton>
                         </FormControl>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
