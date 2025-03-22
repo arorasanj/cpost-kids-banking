@@ -57,7 +57,7 @@ const CardPersonality = () => {
                 <div className="bg-blue-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" 
                       alt="Arts Card Design" 
                       className="w-full h-full object-cover"
                     />
@@ -98,7 +98,7 @@ const CardPersonality = () => {
                 <div className="bg-purple-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
                       alt="Culture Card Design" 
                       className="w-full h-full object-cover"
                     />
@@ -139,7 +139,7 @@ const CardPersonality = () => {
                 <div className="bg-green-50 p-6 flex items-center justify-center">
                   <div className="relative w-[280px] h-[180px] rounded-xl overflow-hidden shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                     <img 
-                      src="/lovable-uploads/8f31a85b-0a3f-4c93-afda-0e701d99492b.png" 
+                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
                       alt="Social Causes Card Design" 
                       className="w-full h-full object-cover"
                     />
