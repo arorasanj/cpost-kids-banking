@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { CreditCard, ArrowRightLeft, PiggyBank, Lock, Coffee, ShoppingBag, Car, ShoppingCart } from 'lucide-react';
 import TransactionItem from './TransactionItem';
-
 const AppPreview = () => {
-  return (
-    <section id="app" className="py-24 relative">
+  return <section id="app" className="py-24 relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-50 via-white to-white"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,12 +31,12 @@ const AppPreview = () => {
                 
                 {/* Virtual Card */}
                 <div className="px-6 my-4">
-                  <div className="bg-cpost-dark rounded-xl p-5 shadow-lg">
+                  <div className="rounded-xl p-5 shadow-lg bg-[003087] bg-cpost-blue">
                     <div className="flex justify-between items-start mb-8">
                       <div className="flex items-center">
                         <div className="bg-cpost-red p-1 rounded-md">
                           <svg width="20" height="14" viewBox="0 0 350 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M312 0L225 87L175 37L125 87L38 0H0V38L87 125L0 212V250H38L125 163L175 213L225 163L312 250H350V212L263 125L350 38V0H312Z" fill="white"/>
+                            <path d="M312 0L225 87L175 37L125 87L38 0H0V38L87 125L0 212V250H38L125 163L175 213L225 163L312 250H350V212L263 125L350 38V0H312Z" fill="white" />
                           </svg>
                         </div>
                         <span className="ml-1.5 text-xs font-bold text-white">CPost</span>
@@ -74,37 +71,11 @@ const AppPreview = () => {
                     <a href="#" className="text-xs text-cpost-red font-medium">See all →</a>
                   </div>
                   <div className="space-y-1">
-                    <TransactionItem
-                      icon={Coffee}
-                      merchant="Starbucks"
-                      date="August 12"
-                      amount="$5.47"
-                    />
-                    <TransactionItem
-                      icon={ShoppingBag}
-                      merchant="H&M"
-                      date="August 10"
-                      amount="$42.99"
-                    />
-                    <TransactionItem
-                      icon={Car}
-                      merchant="Uber"
-                      date="August 8"
-                      amount="$12.95"
-                    />
-                    <TransactionItem
-                      icon={ShoppingCart}
-                      merchant="Amazon"
-                      date="August 5"
-                      amount="$28.35"
-                    />
-                    <TransactionItem
-                      icon={PiggyBank}
-                      merchant="Savings Transfer"
-                      date="August 1"
-                      amount="$50.00"
-                      isDebit={false}
-                    />
+                    <TransactionItem icon={Coffee} merchant="Starbucks" date="August 12" amount="$5.47" />
+                    <TransactionItem icon={ShoppingBag} merchant="H&M" date="August 10" amount="$42.99" />
+                    <TransactionItem icon={Car} merchant="Uber" date="August 8" amount="$12.95" />
+                    <TransactionItem icon={ShoppingCart} merchant="Amazon" date="August 5" amount="$28.35" />
+                    <TransactionItem icon={PiggyBank} merchant="Savings Transfer" date="August 1" amount="$50.00" isDebit={false} />
                   </div>
                 </div>
               </div>
@@ -156,8 +127,6 @@ const AppPreview = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AppPreview;
