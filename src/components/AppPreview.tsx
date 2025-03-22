@@ -117,7 +117,7 @@ const AppPreview = () => {
                   <PiggyBank className="h-6 w-6 text-cpost-red" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Goal-Based Saving</h3>
+                  <h3 className="text-xl font-semibold mb-2">Prize Linked Savings Account (PLSA)</h3>
                   <p className="text-gray-600">
                     Create savings goals with visual progress trackers. Automated transfers make saving effortless and rewarding.
                   </p>
