@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CreditCard, Gift, Lightbulb, Bell, Shield } from 'lucide-react';
 import FeatureCard from './FeatureCard';
@@ -15,8 +14,7 @@ const SpendSection = () => {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6">
-            <span className="text-cpost-blue">Smart Spending</span> <br className="hidden sm:block" />
-            for our next generation
+            <span className="text-cpost-blue">Smart Spending</span>
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
