@@ -16,7 +16,7 @@ const SpendSection = () => {
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6">
             <span className="text-cpost-blue">Smart Spending</span> <br className="hidden sm:block" />
-            for Gen Z
+            for our next generation
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
