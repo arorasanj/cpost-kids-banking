@@ -6,6 +6,7 @@ import DashboardLayout from '@/components/dashboard/DashboardLayout';
 import AccountSummary from '@/components/dashboard/AccountSummary';
 import TransactionList from '@/components/dashboard/TransactionList';
 import AccountHeader from '@/components/dashboard/AccountHeader';
+import PositiveReinforcementMessage from '@/components/dashboard/PositiveReinforcementMessage';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Button from '@/components/Button';
 
@@ -59,19 +60,25 @@ const Dashboard = () => {
       <div className="mb-8">
         <Card className="border-none shadow-none bg-gradient-to-r from-sky-50 via-white to-pink-50">
           <CardContent className="p-8">
-            <div className="space-y-4">
-              <h1 className="text-2xl font-bold text-center">Congratulations! 🎉</h1>
-              <p className="text-center text-gray-600">
-                Your Spend & Save Account is ready to use
-              </p>
-              <div className="flex justify-center my-4">
-                <div className="bg-white shadow-sm rounded-lg py-2 px-4 border">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Account Information Section */}
+              <div className="space-y-4">
+                <h1 className="text-2xl font-bold">Congratulations! 🎉</h1>
+                <p className="text-gray-600">
+                  Your Spend & Save Account is ready to use
+                </p>
+                <div className="bg-white shadow-sm rounded-lg py-2 px-4 border inline-block">
                   <p className="text-sm text-gray-500">Account Number</p>
                   <p className="font-mono font-bold">XXXX-0001</p>
                 </div>
+                <div className="pt-2">
+                  <Button>Turn-on Auto Save</Button>
+                </div>
               </div>
-              <div className="flex justify-center">
-                <Button>Go to Account Settings</Button>
+              
+              {/* Positive Reinforcement Message Section */}
+              <div className="flex items-center justify-center md:justify-end">
+                <PositiveReinforcementMessage />
               </div>
             </div>
           </CardContent>
