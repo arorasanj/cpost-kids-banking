@@ -21,7 +21,7 @@ interface SignUpFormProps {
 interface FormData {
   email: string;
   password: string;
-  dob: Date;
+  dob: string;
   gender: 'male' | 'female' | 'non-binary' | 'prefer-not-to-say';
   address: string;
   residencyStatus: 'citizen' | 'permanent-resident';
@@ -33,7 +33,7 @@ const SignUpForm = ({ onSignedIn }: SignUpFormProps) => {
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: '',
-    dob: new Date(),
+    dob: '',
     gender: 'prefer-not-to-say',
     address: '',
     residencyStatus: 'citizen',

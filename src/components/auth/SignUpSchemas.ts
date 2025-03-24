@@ -7,15 +7,37 @@ export const baseFormSchema = z.object({
 });
 
 export const personalInfoSchema = z.object({
-  dob: z.date({
-    required_error: "Please select a date of birth",
-    invalid_type_error: "That's not a date!",
-  }).refine(date => {
-    const today = new Date();
-    const eighteenYearsAgo = new Date(today);
-    eighteenYearsAgo.setFullYear(today.getFullYear() - 18);
-    return date <= eighteenYearsAgo;
-  }, "You must be at least 18 years old"),
+  dob: z.string()
+    .regex(/^\d{4}\/\d{2}\/\d{2}$/, "Please enter date in YYYY/MM/DD format")
+    .refine(dateStr => {
+      try {
+        const parts = dateStr.split('/');
+        const year = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1; // JavaScript months are 0-based
+        const day = parseInt(parts[2], 10);
+        
+        // Check if it's a valid date
+        const date = new Date(year, month, day);
+        return date.getFullYear() === year && 
+               date.getMonth() === month && 
+               date.getDate() === day;
+      } catch {
+        return false;
+      }
+    }, "Please enter a valid date")
+    .refine(dateStr => {
+      const parts = dateStr.split('/');
+      const year = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const day = parseInt(parts[2], 10);
+      
+      const date = new Date(year, month, day);
+      const today = new Date();
+      const eighteenYearsAgo = new Date(today);
+      eighteenYearsAgo.setFullYear(today.getFullYear() - 18);
+      
+      return date <= eighteenYearsAgo;
+    }, "You must be at least 18 years old"),
   gender: z.enum(['male', 'female', 'non-binary', 'prefer-not-to-say'], {
     required_error: "Please select a gender option",
   }),
