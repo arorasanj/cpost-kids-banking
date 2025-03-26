@@ -24,16 +24,13 @@ const HeroSection = () => {
             Introducing CPost's "Spend & Save" account. Designed for today's youth with exclusive rewards from your favorite brands.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
+          <div className="flex justify-center pt-8">
             <Link to="/signin">
               <Button size="lg" className="group">
                 Get Started
                 <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg">
-              Learn More
-            </Button>
           </div>
           
           <div className="pt-12 flex items-center space-x-4 max-w-xl mx-auto">
