@@ -44,7 +44,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link to="/journey" className="text-sm font-medium text-gray-800 hover:text-cpost-red transition-colors">
-              Your Journey
+              Spend & Save Journey
             </Link>
             <Link to="/signin">
               <Button size="sm">Sign In</Button>
@@ -97,7 +97,7 @@ const Navbar = () => {
               className="text-xl font-medium text-gray-800 hover:text-cpost-red transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Your Journey
+              Spend & Save Journey
             </Link>
             <Link 
               to="/signin" 

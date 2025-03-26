@@ -17,7 +17,7 @@ const JourneyHero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight text-center">
-            Start Their <span className="text-cpost-blue">Journey</span> <br />
+            Start Their <span className="text-cpost-blue">Spend & Save Journey</span> <br />
             To Financial Independence
           </h1>
           
